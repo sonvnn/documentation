@@ -13,7 +13,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/prettyPhoto.css" rel="stylesheet">
     <link href="assets/css/style.min.css" rel="stylesheet">
+    <meta name="nav" content="information">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -24,74 +26,7 @@
 
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img alt="TemPlaza" src="assets/logo.png"></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Information</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Installation <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="installation.html">Quickstart Install</a></li>
-                        <li><a href="#">Manual Install</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Joomla Requirement</a></li>
-                        <li><a href="#">Template Requirement</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Demo Pages</a></li>
-
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Plazart Framework <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Font Configuration</a></li>
-                        <li><a href="#">Color Configuration</a></li>
-                        <li><a href="#">Mega Menu</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">How to add Custom Code?</a></li>
-                        <li><a href="#">How to add Custom CSS?</a></li>
-                        <li><a href="#">How to add Google Analytics?</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Addons <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">TZ Portfolio</a></li>
-                        <li><a href="#">Hikashop</a></li>
-                        <li><a href="#">Jomsocial</a></li>
-                        <li><a href="#">Kunena</a></li>
-                        <li><a href="#">JEvents</a></li>
-                        <li><a href="#">TZ Multipurpose</a></li>
-                        <li><a href="#">TZ Twitter Widget</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
-                      </span>
-                </div>
-            </form>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+<div id="navigator"></div>
 
 <!--Start Content generate-->
 
@@ -176,56 +111,14 @@
 </section>
 <!--End content generate-->
 
-<footer>
-    <div class="container">
-        <div class="doc-social">
-            <ul class="docs-social-buttons">
-                <li>
-                    <a href="https://twitter.com/templazavn" class="twitter-follow-button"><i class="fa fa-twitter-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/templaza" class="facebook-like-button"><i class="fa fa-facebook-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://plus.google.com/+Templaza/" class="google-plus-button"><i class="fa fa-google-plus-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://dribbble.com/templaza" class="dribbble-button"><i class="fa fa-dribbble"></i></a>
-                </li>
-                <li>
-                    <a href="https://github.com/templaza" class="github-button"><i class="fa fa-github"></i></a>
-                </li>
-                <li>
-                    <a href="http://www.youtube.com/channel/UCykS6SX6L2GOI-n3IOPfTVQ" class="youtube-button"><i class="fa fa-youtube-square"></i></a>
-                </li>
-                <li>
-                    <a href="http://www.behance.net/templaza" class="behance-button"><i class="fa fa-behance-square"></i></a>
-                </li>
-            </ul>
-        </div>
-
-
-        <p>Copyright © 2015 <a href="http://www.templaza.com/">TemPlaza</a>. All Rights Reserved.</p>
-        <ul class="docs-footer-links text-muted">
-            <li><a href="https://www.templaza.com/">TemPlaza</a></li>
-            <li>·</li>
-            <li><a href="http://www.templaza.com/joomla-templates">Joomla Template</a></li>
-            <li>·</li>
-            <li><a href="http://www.templaza.com/wordpress-themes">WordPress Theme</a></li>
-            <li>·</li>
-            <li><a href="http://www.templaza.com/free-stuff">Freebies</a></li>
-            <li>·</li>
-            <li><a href="http://www.templaza.com/Forum">Forums</a></li>
-            <li>·</li>
-            <li><a href="http://www.templaza.com/blog/">Blog</a></li>
-        </ul>
-    </div>
-</footer>
+<footer id="doc-footer"></footer>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/doc.js"></script>
 </body>
 </html>

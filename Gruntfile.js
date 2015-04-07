@@ -119,6 +119,16 @@ module.exports = function(grunt) {
             }
         },
 
+        image_resize: {
+            resize_pages: {
+                options: {
+                    width: 270
+                },
+                src: './images/pages/*.jpg',
+                dest: './code/assets/images/pages/'
+            }
+        },
+
         csslint: {
             options: {
                 csslintrc: '.csslintrc'
@@ -135,6 +145,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-image-resize');
 
     // Load tasks.
     //require('matchdep').filterDev(['grunt-*', '!grunt-legacy-util']).forEach( grunt.loadNpmTasks );
