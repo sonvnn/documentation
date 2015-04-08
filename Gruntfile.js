@@ -8,6 +8,7 @@ module.exports = function(grunt) {
         bootstrap: configBridge.config.bootstrap.join('\n'),
         theme: configBridge.config.theme.join('\n'),
         tpl_css: configBridge.config.tpl_css.join('\n'),
+        tpl_style: configBridge.config.tpl_style.join('\n'),
 
 
         jshint: {
@@ -34,11 +35,11 @@ module.exports = function(grunt) {
         },
 
         concat: {
-            catscript: {
+            catcss: {
                 src: [
-                    '<%= yourjsfiles %>/*.js'
+                    '<%= tpl_css %>/*.css', '!<%= tpl_css %>/*.css.map'
                 ],
-                dest: '<%= yourjsfiles %>/allscript.js'
+                dest: '<%= tpl_style %>/style.css'
             }
         },
 
@@ -95,16 +96,12 @@ module.exports = function(grunt) {
         cssmin: {
             options: {
                 compatibility: 'ie8',
-                //keepSpecialComments: '*',
+                keepSpecialComments: false,
                 advanced: false
             },
-            minifyCore: {
-                src: '<%= tpl_css %>/bootstrap.css',
-                dest: '<%= tpl_css %>/bootstrap.min.css'
-            },
             style: {
-                src: '<%= tpl_css %>/style.css',
-                dest: '<%= tpl_css %>/style.min.css'
+                src: '<%= tpl_style %>/style.css',
+                dest: '<%= tpl_style %>/style.min.css'
             }
 
         },
@@ -146,12 +143,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-image-resize');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Load tasks.
     //require('matchdep').filterDev(['grunt-*', '!grunt-legacy-util']).forEach( grunt.loadNpmTasks );
 
     grunt.registerTask('plazat-hint', ['jshint:plazart_admin']);
-    grunt.registerTask('less-compile', ['less:bootstrap', 'less:theme', 'cssmin:minifyCore', 'cssmin:style']);
+    grunt.registerTask('less-compile', ['less:bootstrap', 'less:theme', 'concat:catcss', 'cssmin:style']);
     grunt.registerTask('minify-bootstrap', ['cssmin:minifyCore', 'cssmin:minifyTheme']);
     grunt.registerTask('minify-all', ['cssmin:all']);
     grunt.registerTask('minifyjs-bootstrap', ['uglify:bootstrap']);

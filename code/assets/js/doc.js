@@ -15,6 +15,15 @@ $(document).ready(function(){
         social_tools: false,
         hook: 'data-rel'
     });
+
+    $('#navaffix').affix({
+        offset: {
+            top: 270,
+            bottom: function () {
+                return (this.bottom = $('.footer').outerHeight(true))
+            }
+        }
+    });
 });
 
 

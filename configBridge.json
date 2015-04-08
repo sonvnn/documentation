@@ -24,6 +24,7 @@
         ],
         "bootstrap": ["./less/bootstrap"],
         "theme": ["./less/themes"],
-        "tpl_css": ["./code/assets/css"]
+        "tpl_css": ["./code/assets/css"],
+        "tpl_style": ["./code/assets/style"]
     }
 }
