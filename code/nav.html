@@ -1,59 +1,44 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img alt="TemPlaza" src="assets/logo.png"></a>
-        </div>
+<ul class="nav navbar-nav" id="mainnav">
+    <li data-menu="information"><a href="index.html">Information</a></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Installation
+            <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li data-menu="quickstart"><a href="quickstart.html">Quickstart Install</a></li>
+            <li data-menu="manual-install"><a href="#">Manual Install</a></li>
+            <li class="divider"></li>
+            <li data-menu="joomla-requirement"><a href="#">Joomla Requirement</a></li>
+            <li data-menu="template-requirement"><a href="#">Template Requirement</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Basic Settings
+            <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li data-menu="menu-setting"><a href="//www.tzportfolio.com">Menu Setting</a></li>
+            <li data-menu="category-setting"><a href="//www.hikashop.com">Category Setting</a></li>
+            <li data-menu="blog-post"><a href="//www.jomsocial.com">Blog Post</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Theme Options
+            <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li data-menu="font-configuration"><a href="#">Font Configuration</a></li>
+            <li data-menu="color-configuration"><a href="install/index.html">Color Configuration</a></li>
+            <li data-menu="mega-menu"><a href="#">Mega Menu</a></li>
+        </ul>
+    </li>
+    <li data-menu="demo-pages"><a href="pages.html">Demo Pages</a></li>
+    <li data-menu="shortcode"><a href="shortcode.html">Shortcodes</a></li>
+    <li data-menu="faqs"><a href="faqs.html">FAQs</a></li>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li data-menu="information"><a href="index.html">Information</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Installation <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li data-menu="quickstart"><a href="quickstart.html">Quickstart Install</a></li>
-                        <li data-menu="manual-install"><a href="#">Manual Install</a></li>
-                        <li class="divider"></li>
-                        <li data-menu="joomla-requirement"><a href="#">Joomla Requirement</a></li>
-                        <li data-menu="template-requirement"><a href="#">Template Requirement</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Basic Settings <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li data-menu="menu-setting"><a href="//www.tzportfolio.com">Menu Setting</a></li>
-                        <li data-menu="category-setting"><a href="//www.hikashop.com">Category Setting</a></li>
-                        <li data-menu="blog-post"><a href="//www.jomsocial.com">Blog Post</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Theme Options <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li data-menu="font-configuration"><a href="#">Font Configuration</a></li>
-                        <li data-menu="color-configuration"><a href="#">Color Configuration</a></li>
-                        <li data-menu="mega-menu"><a href="#">Mega Menu</a></li>
-                    </ul>
-                </li>
-                <li data-menu="demo-pages"><a href="pages.html">Demo Pages</a></li>
-                <li data-menu="shortcode"><a href="shortcode.html">Shortcodes</a></li>
-                <li data-menu="faqs"><a href="faqs.html">FAQs</a></li>
-
-            </ul>
-            <form class="navbar-form navbar-right" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
-                      </span>
-                </div>
-            </form>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+</ul>
+<form class="navbar-form navbar-right" role="search">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+        </span>
+    </div>
+</form>
