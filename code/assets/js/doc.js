@@ -16,12 +16,10 @@ $(function(){
                     $(this).attr('href',ex_url + $(this).attr('href'));
                 }
             });
+            $('#logo img').attr('src',ex_url + $('#logo img').attr('src'));
         }
     });
     $("#doc-footer").load(footer_url);
-
-
-
 });
 
 $(document).ready(function(){
