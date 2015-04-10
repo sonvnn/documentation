@@ -17,6 +17,7 @@ $(function(){
                 }
             });
             $('#logo img').attr('src',ex_url + $('#logo img').attr('src'));
+            $('#logo').attr('href',ex_url + $('#logo').attr('href'));
         }
     });
     $("#doc-footer").load(footer_url);
